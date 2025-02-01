@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Delicious Bites</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to Delicious Bites</h2>
+        <p>Experience the best taste in town.</p>
+        <img src="images/restaurant.jpg" alt="Restaurant Image" class="section-image">
+    </section>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="images/pizza.jpg" alt="Pizza"> Pizza - ₹120
+            <button id="pizza-button">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="images/burger.jpg" alt="Burger"> Burger - ₹80
+            <button id="burger-button">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="images/pasta.jpg" alt="Pasta"> Pasta - ₹100
+            <button id="pasta-button">Add to Cart</button>
+        </div>
+    </section>
+    
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="total-price">0</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button id="order-button" onclick="placeOrder()">Order Now</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Delicious Bites. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code for cart and order functionality...
+
+        let cart = [];
+
+        function addToCart(itemName, itemPrice) {
+            const item = {
+                name: itemName,
+                price: itemPrice
+            };
+            cart.push(item);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById("cart-items");
+            const totalPrice = document.getElementById("total-price");
+
+            cartList.innerHTML = "";
+
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${item.name} - ₹${item.price}`;
+                cartList.appendChild(listItem);
+            });
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            totalPrice.textContent = total;
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+
+
+function placeOrder() {
+    if (cart.length === 0) {
+        alert("Your cart is empty! Please add items before ordering.");
+        return;
+    }
+
+    let orderSummary = "Your Order:\n";
+    cart.forEach(item => {
+        orderSummary += `${item.name} - ₹${item.price}\n`;
+    });
+
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    orderSummary += `\nTotal: ₹${total}\n\nThank you for ordering from Delicious Bites!`;
+
+    alert(orderSummary);
+
+    window.location.href = "thank-you.html";  
+
+    clearCart(); 
+}
+
+
+        document.getElementById("pizza-button").addEventListener("click", function() {
+            addToCart("Pizza", 120);
+        });
+        document.getElementById("burger-button").addEventListener("click", function() {
+            addToCart("Burger", 80);
+        });
+        document.getElementById("pasta-button").addEventListener("click", function() {
+            addToCart("Pasta", 100);
+        });
+    </script>
+</body>
+</html>

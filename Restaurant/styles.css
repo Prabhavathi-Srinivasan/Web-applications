@@ -1,0 +1,225 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    box-sizing: border-box;
+}
+
+header {
+    background: #ff6600;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: #fff5e6;
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+#home .section-image {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Section */
+#menu {
+    background: #fff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    background: #fff;
+    padding: 20px;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item div {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+/* Cart and Order Section */
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+#total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 20px;
+}
+
+form input, form textarea, form button {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 80%;
+    max-width: 450px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Contact Form */
+form button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background: #e65c00;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    #menu h2 {
+        font-size: 2rem;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-item img {
+        margin: 10px 0;
+    }
+
+    form input, form textarea, form button {
+        width: 90%;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-item {
+        font-size: 1rem;
+    }
+
+    form input, form textarea, form button {
+        width: 95%;
+    }
+}
