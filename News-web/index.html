@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/news.jpg" type="image/png"> 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Latest News</h1>
+            <input type="text" id="search" placeholder="Search news..." onkeyup="searchNews()">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#latest-news">Home</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#entertainment">Entertainment</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#health">Health</a></li>
+                <li><a href="#finance">Finance</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="news-container">
+        <!-- Latest News Section -->
+        <section id="latest-news" class="category">
+            <h2>Latest News</h2>
+            <div class="article">
+                <img src="images/tech.jpg" alt="News Image">
+                <h3>New Tech Revolution in 2025</h3>
+                <p>Experts predict AI and robotics will reshape industries in 2025...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Sports Section -->
+        <section id="sports" class="category">
+            <h2>Sports</h2>
+            <div class="article">
+                <img src="images/champ.jpg" alt="Sports Image">
+                <h3>Champions League Final: The Road to Glory</h3>
+                <p>The Champions League final approaches with the two top teams...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <img src="images/olympics.jpg" alt="Sports Image">
+                <h3>Olympic Games 2024: What to Expect</h3>
+                <p>The Olympic Games are just around the corner, with more events and excitement...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Entertainment Section -->
+        <section id="entertainment" class="category">
+            <h2>Entertainment</h2>
+            <div class="article">
+                <img src="images/top-m.jpg" alt="Entertainment Image">
+                <h3>Top Movies to Watch in 2025</h3>
+                <p>2025 promises a lineup of blockbuster films, from sci-fi to drama...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <img src="images/celeb.jpg" alt="Entertainment Image">
+                <h3>Celebrity Gossips: Latest Trends</h3>
+                <p>The celebrity world is full of surprises, and here's what's trending...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology" class="category">
+            <h2>Technology</h2>
+            <div class="article">
+                <img src="images/ai.jpg" alt="Tech Image">
+                <h3>AI-Powered Cars: The Future of Transportation</h3>
+                <p>Artificial Intelligence is paving the way for self-driving cars, revolutionizing the way we travel...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <img src="images/quantum.jpg" alt="Tech Image">
+                <h3>Quantum Computing: What You Need to Know</h3>
+                <p>Quantum computing is poised to solve complex problems far beyond the reach of today's classical computers...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Health Section -->
+        <section id="health" class="category">
+            <h2>Health</h2>
+            <div class="article">
+                <img src="images/tele.jpg" alt="Health Image">
+                <h3>The Rise of Telemedicine</h3>
+                <p>Telemedicine is transforming healthcare by offering remote consultations and treatments...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <img src="images/immune.jpg" alt="Health Image">
+                <h3>5 Ways to Boost Your Immune System</h3>
+                <p>Simple lifestyle changes can help strengthen your immune system, keeping you healthier throughout the year...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Finance Section -->
+        <section id="finance" class="category">
+            <h2>Finance</h2>
+            <div class="article">
+                <img src="images/stock.jpg" alt="Finance Image">
+                <h3>Investing in the Stock Market: A Beginner's Guide</h3>
+                <p>Learn how to make smart investments in the stock market to secure your financial future...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <img src="images/crypto.jpg" alt="Finance Image">
+                <h3>The Cryptocurrency Boom: What’s Next?</h3>
+                <p>Cryptocurrency has exploded in popularity, but experts debate what’s next for the digital currency...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Lifestyle Section -->
+        <section id="lifestyle" class="category">
+            <h2>Lifestyle</h2>
+            <div class="article">
+                <img src="images/minimal.jpg" alt="Lifestyle Image">
+                <h3>Minimalist Living: Embrace Less for More</h3>
+                <p>Discover how embracing a minimalist lifestyle can improve your mental well-being and overall happiness...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <img src="images/slow.jpg" alt="Lifestyle Image">
+                <h3>The Art of Slow Travel</h3>
+                <p>Slow travel is about taking time to immerse yourself in new cultures and experiences, rather than rushing through...</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <footer id="contact">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <p>For any inquiries, please email us at <a href="mailto:info@latestnews.com">info@latestnews.com</a>.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
